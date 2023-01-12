@@ -1,7 +1,7 @@
 import random
 import os
 import argparse
-from cv2 import cv2
+import cv2
 from model import Classifier
 from matplotlib import pyplot as plt
 
@@ -11,7 +11,7 @@ def parse_arguments():
     Object for parsing command line strings into Python objects.
     """
     arg = argparse.ArgumentParser()
-    arg.add_argument('--source', '-s', type=str, default='data/EuroSAT/2750',
+    arg.add_argument('--source', '-s', type=str, default='/content/data/2750',
                      help="give main source directory")
     arg.add_argument('--device', '-d', default='cuda',
                      type=str, choices=['cuda', 'cpu'])
